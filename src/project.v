@@ -26,6 +26,7 @@ module tt_um_favoritohjs_scroller (
 	reg[2:0] count1;
 	reg[2:0] count1b;
 	wire     hborder1 = (count1 == 0) || (count1 == 1);
+	wire     vborder1;
 	wire     border1 = vborder1 || hborder1;
 	reg[9:0] lfsr2;
 	reg[9:0] lfsr2b;
@@ -33,14 +34,13 @@ module tt_um_favoritohjs_scroller (
 	reg[1:0] count2b;
 	reg      count2low;
 	wire     hborder2 = (count2 == 0) || (count2 == 1);
+	wire     vborder2;
 	wire     border2 = vborder2 || hborder2;
 	reg      dither;
 	wire     visible;
 
 	wire[4:0] cutoff1;
-	wire      vborder1;
 	wire[4:0] cutoff2;
-	wire      vborder2;
 
 	wire[3:0] l1 = lfsr1[3:0];
 	wire[3:0] l2 = lfsr2[3:0];
