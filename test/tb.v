@@ -7,12 +7,12 @@
 module tb ();
 
   // Dump the signals to a VCD file. You can view it with gtkwave.
+
   initial begin
     $dumpfile("tb.vcd");
     $dumpvars(0, tb);
     #1;
   end
-
   // Wire up the inputs and outputs:
   reg clk;
   reg rst_n;
@@ -22,9 +22,12 @@ module tb ();
   wire [7:0] uo_out;
   wire [7:0] uio_out;
   wire [7:0] uio_oe;
+  //https://www.chipverify.com/verilog/verilog-testbench-simulation
+  //Clock is driven from the testbench.
+  //always #1 clk = ~clk;
 
   // Replace tt_um_example with your module name:
-  tt_um_example user_project (
+  tt_um_favoritohjs_scroller user_project (
       .ui_in  (ui_in),    // Dedicated inputs
       .uo_out (uo_out),   // Dedicated outputs
       .uio_in (uio_in),   // IOs: Input path

@@ -9,12 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+The terrain is based on an LFSR, using the deterministic randomness of one to generate each layer of the city.
 
 ## How to test
 
-Explain how to use your project
+Set Clock to 25.18MHz, and use a Tiny VGA carrier board for video.
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+This project requires a Tiny VGA carrier board to display video.
